@@ -19,10 +19,10 @@
  </p>
 
 <p align="center">
-  <img src="https://github.com/seemoo-lab/AirGuard/raw/main/fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.png" width=200px>
-  <img src="https://github.com/seemoo-lab/AirGuard/raw/main/fastlane/metadata/android/en-US/images/phoneScreenshots/2_en-US.png" width=200px>
-  <img src="https://github.com/seemoo-lab/AirGuard/raw/main/fastlane/metadata/android/en-US/images/phoneScreenshots/3_en-US.png" width=200px>
-  <img src="https://github.com/seemoo-lab/AirGuard/raw/main/fastlane/metadata/android/en-US/images/phoneScreenshots/4_en-US.png" width=200px>
+  <img src="https://github.com/user-attachments/assets/8cbe4b03-06fd-4901-a1aa-25cdf325b85f" width=200px>
+  <img src="https://github.com/user-attachments/assets/13358473-fd3d-40f4-815b-fbc3cfdf25e9" width=200px>
+  <img src="https://github.com/user-attachments/assets/00fe24d5-023c-45cb-8e4a-e4a1b0c9b3ac" width=200px>
+  <img src="https://github.com/user-attachments/assets/cd6ebbb5-bd38-460f-9d5d-d3489971ecf1" width=200px>
 </p>
 
 **Protect yourself from Find My Tracking**
