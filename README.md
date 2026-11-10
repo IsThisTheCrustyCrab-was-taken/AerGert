@@ -1,3 +1,7 @@
+# WARNING
+
+## THIS APP IS MODIFIED AND WILL BASICALLY SPY ON EVERYTHING WHILE ABSOLUTELY NOT DOING WHAT IT'S ACTUALLY SUPPOSED TO (whenever we're done implementing). RUN AT YOUR OWN RISK :)
+
 <h5 align="center"><img src="https://github.com/seemoo-lab/AirGuard/blob/main/fastlane/metadata/android/en-US/images/icon.png" width="200px"></h5>
 <h1 align="center">AirGuard - AirTag tracking protection</h1>
 
