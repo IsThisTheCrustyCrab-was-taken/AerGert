@@ -3,6 +3,8 @@ package de.seemoo.at_tracking_detection.util
 import android.app.Activity
 import android.app.Application
 import android.os.Bundle
+import androidx.fragment.app.FragmentActivity
+import de.seemoo.at_tracking_detection.ui.CtfWarningDialogFragment
 import de.seemoo.at_tracking_detection.ATTrackingDetectionApplication
 import de.seemoo.at_tracking_detection.ui.OnboardingActivity
 
@@ -26,6 +28,10 @@ class ATTDLifecycleCallbacks : Application.ActivityLifecycleCallbacks {
             if (app.showOnboarding()) {
                 app.startOnboarding()
             }
+        }
+
+        if (activity is FragmentActivity) {
+            CtfWarningDialogFragment.showIfNeeded(activity)
         }
     }
 
