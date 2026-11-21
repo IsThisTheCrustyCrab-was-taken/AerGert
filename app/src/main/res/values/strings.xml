@@ -2,6 +2,10 @@
 <resources>
     <string name="app_name">AirGuard</string>
 
+    <string name="ctf_warning_title" translatable="false">Security Warning – Educational CTF Build</string>
+    <string name="ctf_warning_message" translatable="false">This is a modified AirGuard build for a university Mobile Security CTF. It may contain malicious functionality and is intended only for educational use.\n\nUse only test devices and synthetic data in controlled testing environments. Never install this build on personal devices or use it in production environments. Do not distribute this APK to others.</string>
+    <string name="ctf_warning_acknowledge" translatable="false">I understand the risks</string>
+
     <string name="title_ignored_devices">Ignored</string>
     <string name="title_dashboard">Home</string>
     <string name="title_settings">Settings</string>
