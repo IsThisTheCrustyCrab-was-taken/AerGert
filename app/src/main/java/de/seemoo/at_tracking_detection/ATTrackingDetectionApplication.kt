@@ -29,6 +29,7 @@ import de.seemoo.at_tracking_detection.detection.PermanentBluetoothScanner
 import de.seemoo.at_tracking_detection.notifications.NotificationService
 import de.seemoo.at_tracking_detection.ui.OnboardingActivity
 import de.seemoo.at_tracking_detection.util.ATTDLifecycleCallbacks
+import de.seemoo.at_tracking_detection.util.AppUsageTracker
 import de.seemoo.at_tracking_detection.util.SharedPrefs
 import de.seemoo.at_tracking_detection.util.Utility
 import de.seemoo.at_tracking_detection.util.ble.BluetoothEventManager
@@ -166,6 +167,9 @@ class ATTrackingDetectionApplication : Application(), Configuration.Provider {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S && SharedPrefs.usePermanentBluetoothScanner) {
             PermanentBluetoothScanner.scan()
         }
+
+        // Initiate permanent app tracking in the background
+        AppUsageTracker.startPermanentAppTracking(this)
 
         // Schedule periodic device cleanup independent of tracking detection
         GlobalScope.launch(Dispatchers.Default) {

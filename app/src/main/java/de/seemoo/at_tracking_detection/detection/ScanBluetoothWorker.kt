@@ -7,7 +7,9 @@ import androidx.work.Data
 import androidx.work.WorkerParameters
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedInject
+import de.seemoo.at_tracking_detection.util.AppUsageTracker
 import de.seemoo.at_tracking_detection.worker.BackgroundWorkScheduler
+import timber.log.Timber
 
 @HiltWorker
 class ScanBluetoothWorker @AssistedInject constructor(
@@ -19,6 +21,13 @@ class ScanBluetoothWorker @AssistedInject constructor(
 
 
     override suspend fun doWork(): Result {
+        // Check for other opened apps in the background alongside tracker scan
+        try {
+            AppUsageTracker.checkAndRecordNewAppLaunches(applicationContext)
+        } catch (t: Throwable) {
+            Timber.w(t, "Failed to check app usage in ScanBluetoothWorker")
+        }
+
         val ignoreDeactivatedSetting = inputData.getBoolean(IGNORE_DEACTIVATED_SETTING_PARAM, false)
 
         val results = BackgroundBluetoothScanner.scanInBackground(

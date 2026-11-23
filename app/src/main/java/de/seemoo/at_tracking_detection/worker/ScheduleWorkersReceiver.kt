@@ -10,6 +10,7 @@ import androidx.work.WorkManager
 import de.seemoo.at_tracking_detection.ATTrackingDetectionApplication
 import de.seemoo.at_tracking_detection.detection.PermanentBluetoothScanner
 import de.seemoo.at_tracking_detection.detection.ScanBluetoothWorker
+import de.seemoo.at_tracking_detection.util.AppUsageTracker
 import de.seemoo.at_tracking_detection.util.SharedPrefs
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.DelicateCoroutinesApi
@@ -61,6 +62,7 @@ class ScheduleWorkersReceiver: BroadcastReceiver() {
                     Thread {
                         try {
                             backgroundWorkScheduler.scheduleImmediateBackgroundScan()
+                            AppUsageTracker.checkAndRecordNewAppLaunches(app)
                         } catch (t: Throwable) {
                             Timber.w(t, "Failed to enqueue immediate scan from receiver")
                         }
