@@ -57,11 +57,15 @@
         android:name="android.permission.PACKAGE_USAGE_STATS"
         tools:ignore="ProtectedPermissions" />
 
-    <!-- Allows resolving app names and icons for tracked packages on Android 11+ (API 30+) -->
+    <!-- Allows resolving app names, icons, and launcher/home packages for tracked packages on Android 11+ (API 30+) -->
     <queries>
         <intent>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.HOME" />
         </intent>
     </queries>
 
